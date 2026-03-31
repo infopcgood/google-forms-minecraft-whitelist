@@ -31,7 +31,7 @@ def main():
                 print('Failed to get nicknames from spreadsheet!')
                 return
 
-            new_nicks = set(existing_nicks) - set(nicknames)
+            new_nicks = set(nicknames) - set(existing_nicks)
             for nick in new_nicks:
                 mcr.command("whitelist add " + nick)
                 time.sleep(1)
